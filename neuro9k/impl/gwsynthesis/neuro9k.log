@@ -1,0 +1,39 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v'
+Analyzing included file 'C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\links.txt'("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":109)
+Back to file 'C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v'("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":109)
+Compiling module 'neuro'("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":11)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 1("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":27)
+WARN  (EX3791) : Expression size 26 truncated to fit in target size 25("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":52)
+WARN  (EX1998) : Net 'matrix[7][7]' does not have a driver("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":23)
+NOTE  (EX0101) : Current top module is "neuro"
+WARN  (EX0211) : The output port "leds[5]" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":13)
+WARN  (EX0211) : The output port "leds[4]" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":13)
+WARN  (EX0211) : The output port "leds[3]" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":13)
+WARN  (EX0211) : The output port "leds[2]" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":13)
+WARN  (EX0211) : The output port "leds[1]" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":13)
+WARN  (EX0211) : The output port "leds[0]" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":13)
+WARN  (EX0211) : The output port "low" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":14)
+WARN  (EX0211) : The output port "high" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":14)
+[5%] Running netlist conversion ...
+WARN  (CV0020) : Input btn[3:1] is unused("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\src\neuro9k.v":11)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\impl\gwsynthesis\neuro9k.vg" completed
+NOTE  (TA1125) : More than 10 critical paths are ignored because having large logic level.
+[100%] Generate report file "C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k\impl\gwsynthesis\neuro9k_syn.rpt.html" completed
+GowinSynthesis finish
