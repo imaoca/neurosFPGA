@@ -1,0 +1,34 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v'
+Compiling module 'neuro'("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":1)
+Extracting RAM for identifier 'links'("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":10)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 1("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":12)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 8("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":20)
+WARN  (EX3791) : Expression size 26 truncated to fit in target size 25("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":22)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":67)
+WARN  (EX1998) : Net 'matrix[7][7]' does not have a driver("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":4)
+NOTE  (EX0101) : Current top module is "neuro"
+WARN  (EX0211) : The output port "low" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":1)
+WARN  (EX0211) : The output port "high" of module "neuro" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":1)
+[5%] Running netlist conversion ...
+WARN  (CV0020) : Input btn[3:1] is unused("C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\src\neuro.v":1)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\impl\gwsynthesis\neuro9k_learn.vg" completed
+NOTE  (TA1125) : More than 4 critical paths are ignored because having large logic level.
+[100%] Generate report file "C:\Users\imaoca09\OneDrive\source\tangnano\neuro9k_learn\impl\gwsynthesis\neuro9k_learn_syn.rpt.html" completed
+GowinSynthesis finish
