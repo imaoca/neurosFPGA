@@ -1,5 +1,5 @@
-// Random input characters are given,
-module neuro (input rst,input clk,input [3:0]btn,output test1,test2,low,high,[7:0]col,[7:0]row);
+// Added Abtn to switch between random and fixed input characters.
+module neuro (input rst,input clk,Abtn,input [3:0]btn,output test1,test2,low,high,[7:0]col,[7:0]row);
   reg [24:0] neuros;
   wire [7:0] matrix[7:0];
   reg[4:0] i=0,jj=0;
@@ -22,8 +22,9 @@ module neuro (input rst,input clk,input [3:0]btn,output test1,test2,low,high,[7:
   always @(posedge(clk))count12 = count12 + 1;
 
   integer k,m;
+
   always @(posedge(clk))begin
-	if (rst==0)  neuros = count12;
+	if (rst==0)  neuros = (Abtn==1)? count12 : 25'b0111010011100100001001110; 
 	if (btn[0]==0)if (count12[22]==0) begin
         for (k=0;k<25;k=k+1) begin 
             sum=0;
@@ -34,6 +35,19 @@ module neuro (input rst,input clk,input [3:0]btn,output test1,test2,low,high,[7:
 	end
  end
 
+/*
+  always @(posedge(clk))begin
+	if (rst==0)  neuros = (Abtn==1)? neuros = count12:25'b0111010011100100001001110; 
+	if (btn[0]==0)if (count12[22]==0) begin
+        for (k=0;k<25;k=k+1) begin 
+            sum=0;
+            for (m=0;m<25;m=m+1) 
+                sum = sum + ((neuros[m]==1)?links[(k<<4)+(k<<3)+k+m]:(-links[(k<<4)+(k<<3)+k+m]));
+        neuros[k]=(sum>0)?1:0;
+        end
+	end
+ end
+*/
 /*
   always @(posedge(clk))begin
 	if (rst==0)  neuros = count12;
@@ -102,13 +116,27 @@ module neuro (input rst,input clk,input [3:0]btn,output test1,test2,low,high,[7:
         for (k=0;k<25;k=k+1)
           for(m=0;m<25;m=m+1)
             links[k*25+m]=
+//            ((D[k]==D[m])?1:-1)+((J[k]==J[m])?1:-1)+((C[k]==C[m])?1:-1)+((M[k]==M[m])?1:-1);
+            ((D[k]==D[m])?1:-1)+((J[k]==J[m])?1:-1)+((C[k]==C[m])?1:-1)+((M[k]==M[m])?1:-1)+((noise[k]==noise[m])?1:-1); 
+	end
+
+/*
+ always @(posedge(clk))if (rst==0) begin 
+        D     = 25'b0111010010100101001001111;
+        C     = 25'b0011101001010000100011111;
+        J     = 25'b1111000001000010000111110;
+        M     = 25'b1000110001101011101110001;
+        noise = count12; 
+        for (k=0;k<25;k=k+1)
+          for(m=0;m<25;m=m+1)
+            links[k*25+m]=
             ((D[k]==D[m])?1:-1)+
             ((J[k]==J[m])?1:-1)+
             ((C[k]==C[m])?1:-1)+
             ((M[k]==M[m])?1:-1)+
             ((noise[k]==noise[m])?1:-1);
 	end
-
+*/
 /*
  always @(posedge(clk))if (rst==0) begin 
 	learn[0]  = 25'b0111010010100101001001111;
