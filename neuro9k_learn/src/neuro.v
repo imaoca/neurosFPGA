@@ -30,6 +30,6 @@ module neuro (input rst,input clk,Abtn,Bbtn,input [3:0]btn,output test1,test2,lo
  always @(posedge(counter[19]))if (rst==0) 
         for (k=0;k<25;k=k+1)
           for(m=0;m<25;m=m+1)
-            links[k*25+m]=((D[k]==D[m])?1:-1)+((J[k]==J[m])?1:-1)+((C[k]==C[m])?1:-1)+((M[k]==M[m])?1:-1); 
-//          links[k*25+m]=((D[k]==D[m])?1:-1)+((J[k]==J[m])?1:-1)+((C[k]==C[m])?1:-1)+((M[k]==M[m])?1:-1)+((noise[k]==noise[m])?1:-1); 
+            links[k*25+m]<=((D[k]==D[m])?1:-1)+((J[k]==J[m])?1:-1)+((C[k]==C[m])?1:-1)+((M[k]==M[m])?1:-1); 
+//          links[k*25+m]<=((D[k]==D[m])?1:-1)+((J[k]==J[m])?1:-1)+((C[k]==C[m])?1:-1)+((M[k]==M[m])?1:-1)+((noise[k]==noise[m])?1:-1); 
 endmodule
